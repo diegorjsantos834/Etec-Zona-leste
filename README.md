@@ -1,5 +1,5 @@
 # Etec Zona leste
-ativiade do marcelo
+atividade do marcelo
 
 Print da tela:
 
