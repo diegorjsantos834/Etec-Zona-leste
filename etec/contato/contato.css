@@ -1,0 +1,287 @@
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
+.body{
+    background-color: azure;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.Nav{
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+ 
+}
+
+
+.icons a {
+    font-size: 40px;
+    color: black ;
+    padding: 10px;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.icons a:hover {
+    color: rgb(160, 8, 8) ;
+    transform: scale(1.07);
+    
+}
+
+.menu {
+    display: flex;
+    padding-right: 20px ;
+    gap:40px
+}
+
+.menu ul {
+    list-style: none;
+
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    font-size: large;
+    font-weight: bold;
+    transition: 0.4s;
+    font-family: Arial;
+}
+
+.menu a:hover{
+    color: rgb(160, 8, 8);
+
+}
+
+.menu a::before, a::after {
+
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: rgb(160, 8, 8);
+  transition: all 0.5s;
+}
+
+.menu a::before {
+  top: 0;
+  left: 0;
+}
+
+.menu a::after {
+  bottom: 0;
+  right: 0;
+}
+
+.menu a:hover::before {
+  width: 100%;
+  transition: width 0.25s ease-in-out;
+}
+
+.menu a:hover::after {
+  width: 100%;
+  transition: width 0.25s ease-in-out 0.25s;
+}
+
+
+.Nav img {
+    max-width: 300px;
+    height: auto;
+    cursor: pointer;
+
+}
+/*==========================================================================rodapé==================================================*/
+.Rodapé{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+    background-color: black ;
+
+
+}
+
+.Rodapé img {
+    max-height: 60px;              
+    width: auto;
+}
+
+
+.menuFo {
+    display: flex;                 
+    gap: 30px;                     
+}
+
+
+.menuFo ul {
+    list-style: none;              
+    margin: 0;
+    padding: 0;
+}
+
+
+.menuFo a {
+    text-decoration: none;         
+    color: #ececec;                  
+    font-weight: 500;
+    transition: color 0.3s;
+    font-family: Arial;       
+}
+
+.menuFo a:hover {
+    color: #e31d1a;               
+}
+/*=======================================================================cards=================================================================*/
+
+.forms{
+    background-image: url('../img/doodles_chat.png');
+    background-repeat: repeat;
+    background-size: 400px;
+    background-color: #ebebeb;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+
+}
+
+.card_image{
+    border-radius: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 800px;
+}
+
+.card_image img{
+    width: 100%;
+    height: auto;
+}
+
+.card_forms {
+    background-color: whitesmoke;
+    border: solid 2px;
+    border-radius: 20PX;
+    border-color: #e31d1a;
+    width: 600px;
+    height: 800px;
+    padding: 0 30px;
+    
+}
+
+.card_forms form {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   justify-content: center;
+   height: 100%;
+     
+}
+
+
+.titulo {
+    padding-bottom: 20px;
+    font-size: xx-large;
+    font-family: Verdana;
+    color: #e31d1a;
+}
+
+.formulario label {
+    font-size: x-large;
+    font-family: Verdana;
+    color: rgb(34, 34, 34);
+}
+
+.caixa {
+    width: 100%;
+    height: 45px;
+    border-color: black;
+    border-radius: 8px;
+    border: solid 2px;
+    padding: 5px;
+
+}
+
+.caixa:hover{
+    border-color: #e31d1a;
+
+}
+
+.caixa:focus{
+    border-color: #e31d1a;
+    outline: none;
+    box-shadow: 0 0 5px rgba(227, 29, 26, 0.5);
+}
+
+#tamanho{
+    height: 120px;
+}
+
+
+.button {
+    border: solid #e31d1a;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: x-large;
+    background-color: #e31d1a;
+    border-radius: 8px;
+    color: whitesmoke;
+    width: 100%;
+    height: 45px;
+}
+
+.button:hover {
+    border: solid #a5100e;
+    background-color: #a5100e;
+    color: whitesmoke;
+    cursor: pointer;
+}
+/*========================================================modal=============================================== */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+
+.modal-conteudo {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 30px;
+    border-left: 10px solid #e31d1a;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    font-family: Arial;
+    position: relative;
+}
+
+
+.fechar {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}

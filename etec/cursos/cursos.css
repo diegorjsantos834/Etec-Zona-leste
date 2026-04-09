@@ -1,0 +1,390 @@
+
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
+.body{
+    background-color: azure;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.Nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+ 
+}
+
+
+.icons a {
+    font-size: 40px;
+    color: black ;
+    padding: 10px;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.icons a:hover {
+    color: rgb(160, 8, 8) ;
+    transform: scale(1.07);
+    
+}
+
+.menu {
+    display: flex;
+    padding-right: 20px ;
+    gap:40px
+}
+
+.menu ul {
+    list-style: none;
+
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    font-size: large;
+    font-weight: bold;
+    transition: 0.4s;
+    font-family: Arial;
+}
+
+.menu a:hover{
+    color: rgb(160, 8, 8);
+
+}
+
+.menu a::before, a::after {
+
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: rgb(160, 8, 8);
+  transition: all 0.5s;
+}
+
+.menu a::before {
+  top: 0;
+  left: 0;
+}
+
+.menu a::after {
+  bottom: 0;
+  right: 0;
+}
+
+.menu a:hover::before {
+  width: 100%;
+  transition: width 0.25s ease-in-out;
+}
+
+.menu a:hover::after {
+  width: 100%;
+  transition: width 0.25s ease-in-out 0.25s;
+}
+
+
+.Nav img {
+    max-width: 300px;
+    height: auto;
+    cursor: pointer;
+
+}
+
+.Rodapé{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+    background-color: black ;
+
+
+}
+
+.Rodapé img {
+    max-height: 60px;              
+    width: auto;
+}
+
+
+.menuFo {
+    display: flex;                 
+    gap: 30px;                     
+}
+
+
+.menuFo ul {
+    list-style: none;              
+    margin: 0;
+    padding: 0;
+}
+
+
+.menuFo a {
+    text-decoration: none;         
+    color: #ececec;                  
+    font-weight: 500;
+    transition: color 0.3s;
+    font-family: Arial;       
+}
+
+.menuFo a:hover {
+    color: #e31d1a;               
+}
+
+/*=========================================================banner==============================================*/
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #f5f5f5;
+    
+}
+
+.texto h1{
+    font-family: Verdana;   
+    font-size: 36px;
+    color: #e31d1a;
+}
+
+.texto p {
+    font-family: Arial;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.5;
+    padding-bottom: 20px;
+}
+
+.texto a {
+    font-family: Arial;
+    padding: 10px;
+    text-decoration: none;
+    color: #e31d1a;
+    font-weight: bold;
+    margin-top: 20px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    border: solid 2px #e31d1a;
+    transition: background-color 0.6s, transform 0.3s;
+}
+
+.texto a:hover {
+    text-decoration: none;
+    color: aliceblue;
+    background-color: #e31d1a;
+    border: solid 2px #e31d1a;
+}
+
+.imagem_banner img {
+    max-width: 500px;
+    height: auto;
+    border-radius: 20px;
+    border: solid 2px #e31d1a;
+}
+
+/*=========================================================cursos oferecidos==============================================*/
+.Cursos_oferecidos{
+    background-color: #f0f0f0;
+    padding: 100px 0;
+}
+
+
+.titulo{
+    font-family: Verdana;
+    font-size: xxx-large;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center ;
+    justify-content: flex-start;
+    gap: 30px; 
+    max-width: 1100px; 
+    margin: 0 auto; 
+}
+
+.card_etec {
+    background-color: #f0f8ff;
+    border-radius: 10px;
+    border: solid 2px #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.33% - 40px); 
+    min-width: 280px;
+    height: 450px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card_etec i {
+    font-size: 100px;
+    color: #e31d1a;
+    margin-bottom: 15px;
+}
+
+.card_etec:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-color: #e31d1a;
+    cursor: pointer;
+}
+
+.card_etec h2 {
+    font-size: x-large;
+    font-family: Arial;
+    margin-bottom: 15px;
+}
+
+.card_etec p {
+    font-size: medium;
+    font-family: Arial;
+    margin-bottom: 15px;
+}
+
+/*=========================================================Cursos==============================================*/
+.container-pedagogico {
+    padding: 60px 40px;
+    max-width: 1000px;
+    margin: 40px auto;
+    font-family: Verdana, Arial, Helvetica;
+
+}
+
+.fundo {
+    background-image: url('../img/fundo_2.png'); 
+    background-size: cover;      
+    background-position: center;
+    background-attachment: fixed;
+    max-width: 100%;
+}
+
+.curso-item {
+    padding: 30px 0;
+    border: none;
+}
+
+.curso-titulo {
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #e31d1a;
+}
+
+.curso-descricao {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+ .ams-destaque {
+    background-color: #fcfcfc;
+    border-left: 3px solid #e31d1a;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+ .ams-label {
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+ .ams-periodo {
+    margin-top: 15px;
+    font-style: italic;
+}
+
+
+ .divisor-suave {
+    border: 0;
+    border-top: 1px solid #f0f0f0d5;
+    margin: 10px 0;
+}
+
+/*=========================================================vestibulinho==============================================*/
+.vestibulinho {
+    background-color: #f0f0f0;
+    padding: 60px 40px;
+    font-family: Verdana, Arial;
+}
+
+.container_vestibulinho {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Espaço entre texto e imagem */
+    justify-content: space-between;
+}
+
+.texto_vestibulinho {
+    flex: 1; /* Faz o texto ocupar metade do espaço */
+}
+
+.titulo_v {
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #e31d1a; /* Seu vermelho padrão */
+}
+
+.descricao_v {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    color: #333;
+    text-align: justify;
+}
+
+/* Estilização do Botão */
+.botao_v {
+    font-family: Arial;
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #e31d1a;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.botao_v:hover {
+    background-color: #b31613; /* Tom mais escuro ao passar o mouse */
+}
+
+/* Estilização da Imagem */
+.imagem_vestibulinho {
+    flex: 1;
+    text-align: right;
+}
+
+.imagem_vestibulinho img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: solid 2px #e31d1a;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}

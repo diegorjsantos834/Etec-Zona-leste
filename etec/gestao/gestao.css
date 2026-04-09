@@ -1,0 +1,513 @@
+
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
+.body{
+    background-color: azure;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.Nav{
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+ 
+}
+
+
+.icons a {
+    font-size: 40px;
+    color: black ;
+    padding: 10px;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.icons a:hover {
+    color: rgb(160, 8, 8) ;
+    transform: scale(1.07);
+    
+}
+
+.menu {
+    display: flex;
+    padding-right: 20px ;
+    gap:40px
+}
+
+.menu ul {
+    list-style: none;
+
+}
+
+.menu a {
+    color: black;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    font-size: large;
+    font-weight: bold;
+    transition: 0.4s;
+    font-family: Arial;
+}
+
+.menu a:hover{
+    color: rgb(160, 8, 8);
+
+}
+
+.menu a::before, a::after {
+
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: rgb(160, 8, 8);
+  transition: all 0.5s;
+}
+
+.menu a::before {
+  top: 0;
+  left: 0;
+}
+
+.menu a::after {
+  bottom: 0;
+  right: 0;
+}
+
+.menu a:hover::before {
+  width: 100%;
+  transition: width 0.25s ease-in-out;
+}
+
+.menu a:hover::after {
+  width: 100%;
+  transition: width 0.25s ease-in-out 0.25s;
+}
+
+
+.Nav img {
+    max-width: 300px;
+    height: auto;
+    cursor: pointer;
+
+}
+
+.Rodapé{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+    background-color: black ;
+
+
+}
+
+.Rodapé img {
+    max-height: 60px;              
+    width: auto;
+}
+
+
+.menuFo {
+    display: flex;                 
+    gap: 30px;                     
+}
+
+
+.menuFo ul {
+    list-style: none;              
+    margin: 0;
+    padding: 0;
+}
+
+
+.menuFo a {
+    text-decoration: none;         
+    color: #ececec;                  
+    font-weight: 500;
+    transition: color 0.3s;
+    font-family: Arial;       
+}
+
+.menuFo a:hover {
+    color: #e31d1a;               
+}
+
+/*========================================================Gestao=============================================== */
+
+.banner {
+    background-color: #f0f8ff;
+
+}
+
+.layout_gestao{
+    border-radius: 20px;
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url('../img/etec_cima4.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    margin: 50px;
+}
+
+.texto_gestao {
+    text-align: start;
+    max-width: 500px;
+    text-align: start;
+    margin: 100px;
+}
+
+.texto_gestao h1 {
+    font-family: Verdana;
+    font-size: xxx-large;
+    color: #ececec;
+    padding-bottom: 10px;
+}
+
+.texto_gestao h2{
+    font-family: Tahoma;
+    color: #e31d1a;
+}
+
+.texto_gestao p{
+    padding-top: 5px;
+    color: #ececec;
+    font-family: Arial;
+}
+
+.banner_img img{
+    text-align: end;
+    max-width: 400px;
+    height: auto;
+    text-align: end;
+    
+}
+
+/*========================================================diretoria=============================================== */
+
+.direcao {
+    background-color: #f0f0f0;
+    padding: 100px 0;
+}
+
+
+.titulo_direcao {
+    font-family: Verdana;
+    font-size: xxx-large;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+
+.layout_direcao {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch; 
+    justify-content: center;
+    gap: 30px; 
+    max-width: 1100px; 
+    margin: 0 auto; 
+}
+
+/*========================================================card=============================================== */
+
+
+.card {
+    background-color: #f0f8ff;
+    border-radius: 10px;
+    border: solid 2px #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    width: calc(33.33% - 40px); 
+    min-width: 280px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.card i {
+    color: #e31d1a;
+    font-size: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e31d1a; 
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-color: #e31d1a;
+    cursor: pointer;
+}
+
+
+.card h3 {
+    font-family: Arial;
+    font-size: small;
+    color: #e31d1a;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+
+.card h2 {
+    font-family: Arial;
+    font-size: x-large;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+
+.card p {
+    font-family: Arial;
+    font-size: medium;
+    line-height: 1.5;
+    color: #555;
+}
+
+/*========================================================coordenação=============================================== */
+
+.Coordenacao {
+    background-color: aliceblue;
+    padding: 100px 0;
+}
+
+.titulo{
+    font-family: Verdana;
+    font-size: xxx-large;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+
+.layout_coord {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch; 
+    justify-content: center;
+    gap: 30px; 
+    max-width: 1100px; 
+    margin: 0 auto; 
+}
+
+/*========================================================secretaria=============================================== */
+
+.secretaria {
+    background-color: #f0f0f0;
+    padding: 100px 0;
+}
+
+
+.secretaria .titulo {
+    font-family: Verdana;
+    font-size: xxx-large;
+    text-align: center;
+    padding-bottom: 50px;
+    color: #333;
+}
+
+
+.layout_secretaria {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.horario {
+    flex: 1;
+    max-width: 400px;
+    background-color: #f9f9f9;
+    border-left: 8px solid #b30000;
+    border-top: 2px solid #b30000;
+    border-bottom: 2px solid #b30000;
+    border-right: 8px solid #b30000;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.horario h3 {
+    font-family: Verdana;
+    font-size: 1.8rem;
+    color: #b30000;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.horario p {
+    font-family: Arial;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.horario img {
+    max-width: 318px;;
+    border: solid 2px #b30000;
+    width: 318px;
+    height: 410px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.equipe {
+    flex: 2; 
+}
+
+.equipe > h3 {
+    font-family: Verdana;
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.equipe ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.cards {
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    border: solid 2px #b30000;
+    border-left: 5px solid #b30000;
+    border-right: 5px solid #b30000;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.cards:hover {
+    transform: translateX(10px);
+    border-color: #e31d1a;
+    cursor: pointer;
+}
+
+
+.cards i{
+    color: #b30000;
+    font-size: 40px;
+    border-radius: 50%;
+    border: solid 2px #b30000;
+    background-color: #ddd;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+
+
+.nome {
+    font-family: Arial;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    flex: 1;
+}
+
+.cargo {
+    font-family: Arial;
+    font-size: 0.9rem;
+    color: #e31d1a;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/*========================================================aados alunos=============================================== */
+
+.dados_alunos {
+    background-color: #ffffff; 
+    padding: 60px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+
+.layout_aluno {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px 20px; 
+}
+
+
+.dados_aluno {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    padding: 10px;
+}
+
+
+.dados_aluno i {
+    font-size: 45px;
+    color: #e31d1a; 
+    margin-bottom: 15px;
+    display: block;
+}
+
+.dados_aluno h3 {
+    font-family: Arial, sans-serif;
+    font-size: 0.9rem;
+    color: #777; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+
+.dados_aluno p {
+    font-family: Verdana, sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #222;
+    margin: 0;
+}
+
+
+.dados_aluno:hover i {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
