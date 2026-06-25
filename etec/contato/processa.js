@@ -6,7 +6,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (form) {
         form.addEventListener('submit', function(e) {
-            e.preventDefault(); // ESSA LINHA evita que abra outra página
+            e.preventDefault(); //evita que abra outra página
+
+            // Pegua o campo
+            const nomeInput = this.querySelector('[name="nome"]');
+            const temaInput = this.querySelector('[name="tema"]');
+
+    // Validação para verifica se os inputs existem na tela antes de ler o valor
+            if (!nomeInput || !temaInput) {
+                console.error("Os campos do formulário não foram encontrados pelo JavaScript.");
+                return;
+            }
+
+            const nome = nomeInput.value.trim();
+            const tema = temaInput.value.trim();
+
+    // Fazemos a validação se estão vazios
+           if (nome === "" || tema === "") {
+              alert("Por favor, preencha o nome e o assunto do formulário.");
+              return; // Para o código aqui se estiver vazio
+           }
 
             const formData = new FormData(this);
 
