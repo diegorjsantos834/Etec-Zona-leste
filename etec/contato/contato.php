@@ -39,7 +39,7 @@ echo             '</div>';
 echo             '<label for="nome">Digite seu nome: </label><br>';
 echo             '<input class="caixa" type="text" name="nome"/><br>';
 echo             '<label for="email">Digite seu email: </label><br>';
-echo             '<input class="caixa" type="text" name="email" placeholder="exemplo@gmail.com"/><br>';
+echo             '<input class="caixa" type="email" name="email" placeholder="exemplo@gmail.com"/><br>';
 echo             '<label for="tema">Digite o assunto: </label><br>';
 echo             '<input class="caixa" type="text" name="tema"/><br>';
 echo             '<label for="msg">Digite a mensagem: </label><br>';
