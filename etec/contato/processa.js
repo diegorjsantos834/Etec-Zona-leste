@@ -4,28 +4,85 @@ document.addEventListener('DOMContentLoaded', () => {
     const span = document.querySelector(".fechar");
     const respostaDiv = document.getElementById("mensagem-resposta");
 
+    
+    //função para ajudar na troca de cor na hora de vaildar o forms
+    function aplicarValidacao(input, status) {
+    if (status === 'sucesso') {
+        input.classList.add('campo_valido');
+        input.classList.remove('campo_invalido');
+    } else if (status === 'erro') {
+        input.classList.add('campo_invalido');
+        input.classList.remove('campo_valido');
+    } else {
+        input.classList.remove('campo_valido', 'campo_invalido');
+    }
+}
+
     if (form) {
         form.addEventListener('submit', function(e) {
-            e.preventDefault(); //evita que abra outra página
+            e.preventDefault(); // evita que abra outra pagina
 
-            // Pegua o campo
+            //Pega o campo e valida
             const nomeInput = this.querySelector('[name="nome"]');
+            const emailInput = this.querySelector('[name="email"]');
             const temaInput = this.querySelector('[name="tema"]');
+            const assuntoInput = this.querySelector('[name="msg"]');
 
-    // Validação para verifica se os inputs existem na tela antes de ler o valor
-            if (!nomeInput || !temaInput) {
-                console.error("Os campos do formulário não foram encontrados pelo JavaScript.");
-                return;
+            // Verifica se os inputs existem
+            if (!nomeInput || !emailInput || !temaInput || !assuntoInput ) {
+               console.error("Os campos do formulário não foram encontrados pelo JavaScript.");
+               return;
             }
 
             const nome = nomeInput.value.trim();
+            const email = emailInput.value.trim();
             const tema = temaInput.value.trim();
+            const assunto = assuntoInput.value.trim();
 
-    // Fazemos a validação se estão vazios
-           if (nome === "" || tema === "") {
-              alert("Por favor, preencha o nome e o assunto do formulário.");
-              return; // Para o código aqui se estiver vazio
-           }
+            let formularioValido = true;
+
+                // Validação do Nome
+                if (nome === "" || nome.length < 3) {
+                    aplicarValidacao(nomeInput, 'erro');
+                    formularioValido = false;
+                } else {
+                    aplicarValidacao(nomeInput, 'sucesso');
+                }
+
+                
+                if (email === "" || !email.includes("@")) {
+                    aplicarValidacao(emailInput, 'erro');
+                    formularioValido = false;
+                } else {
+                    aplicarValidacao(emailInput, 'sucesso');
+                }
+
+                // Validação do Tema
+                if (tema === "") {
+                    aplicarValidacao(temaInput, 'erro');
+                    formularioValido = false;
+                } else {
+                    aplicarValidacao(temaInput, 'sucesso');
+                }
+
+                // Validação do Assunto/Mensagem
+                if (assunto === "") {
+                    aplicarValidacao(assuntoInput, 'erro');
+                    formularioValido = false;
+                } else {
+                    aplicarValidacao(assuntoInput, 'sucesso');
+                }
+        
+            //para o codigo se as condições acima não forem cumpridas
+            if (!formularioValido) {
+                return;
+            }
+            
+
+
+            
+
+            //
 
             const formData = new FormData(this);
 

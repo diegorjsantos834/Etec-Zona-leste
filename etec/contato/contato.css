@@ -249,6 +249,23 @@
     color: whitesmoke;
     cursor: pointer;
 }
+
+
+
+/*=============================================================verificação de formuulario=================================================*/
+/* Válido - Aplica direto no input que tem a classe */
+input.campo_valido, textarea.campo_valido {
+    border-color: #28a745;
+    outline: none; /* Remove aquela borda preta padrão do navegador ao focar */
+}
+
+/* Inválido - Aplica direto no input que tem a classe */
+input.campo_invalido, textarea.campo_invalido {
+    border-color: #dc3545;
+    outline: none;
+}
+
+
 /*========================================================modal=============================================== */
 .modal {
     display: none; 

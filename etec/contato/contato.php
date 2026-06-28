@@ -43,7 +43,7 @@ echo             '<input class="caixa" type="email" name="email" placeholder="ex
 echo             '<label for="tema">Digite o assunto: </label><br>';
 echo             '<input class="caixa" type="text" name="tema"/><br>';
 echo             '<label for="msg">Digite a mensagem: </label><br>';
-echo             '<input class="caixa" id="tamanho" type="text" name="mgs"/><br><br>';
+echo             '<input class="caixa" id="tamanho" type="text" name="msg"/><br><br>';
 echo             '<input class="button" type="submit" value="Enviar"/>';
 echo         '</form>';
 echo     '</div>';
