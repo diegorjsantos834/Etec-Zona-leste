@@ -16,6 +16,11 @@ O projeto foi construído utilizando as seguintes tecnologias:
 
 ## 📸 Demonstração do Projeto (Prints da Tela)
 
+#### 🔐 Validação do Formulário (Atualização)!!!!!!
+foi implementada a validação dos campos do formulário de contato para garantir a integridade dos dados enviados.
+
+OBS: a fotos estão na aba de contatos
+
 ### 🏠 Home
 <kbd><img width="1841" height="885" alt="Home 1" src="https://github.com/user-attachments/assets/08130d1a-1ff8-47e2-b15d-80548834b103" /></kbd>
 <kbd><img width="1824" height="720" alt="Home 2" src="https://github.com/user-attachments/assets/42a70356-ee09-4e45-a249-73cc97f79481" /></kbd>
@@ -58,6 +63,7 @@ O projeto foi construído utilizando as seguintes tecnologias:
 
 #### 🔐 Validação do Formulário (Atualização)
 foi implementada a validação dos campos do formulário de contato para garantir a integridade dos dados enviados.
+
 
 
 
