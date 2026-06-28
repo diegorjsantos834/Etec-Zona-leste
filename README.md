@@ -64,6 +64,28 @@ OBS: a fotos estão na aba de contatos
 #### 🔐 Validação do Formulário (Atualização)
 foi implementada a validação dos campos do formulário de contato para garantir a integridade dos dados enviados.
 
+**Regras de Negócio aplicadas:**
+* **Nome:** Obrigatório e deve conter no mínimo 3 caracteres.
+* **E-mail:** Obrigatório e deve conter o caractere `@`.
+* **Tema:** Seleção/preenchimento obrigatório.
+* **Assunto/Mensagem:** Preenchimento obrigatório.
+
+* **Tela com erros de validação (campos inválidos):**
+<img width="636" height="703" alt="image" src="https://github.com/user-attachments/assets/50d72b3e-99f1-4521-acd4-2409a44e5c63" />
+
+<img width="847" height="902" alt="image" src="https://github.com/user-attachments/assets/588ecb8b-4141-464d-8cd5-05872fbd58ed" />
+
+<img width="655" height="856" alt="image" src="https://github.com/user-attachments/assets/d368323f-2518-4b5f-adaa-ba2a76ed5790" />
+
+<img width="641" height="851" alt="image" src="https://github.com/user-attachments/assets/28fa8aa9-7069-4d54-a284-1091eb65ad97" />
+
+**Tela de sucesso (todos os campos validados com sucesso):**
+
+<img width="1831" height="903" alt="image" src="https://github.com/user-attachments/assets/780917c9-e5d9-4493-a58f-52440eff626a" />
+
+
+
+
 
 
 
